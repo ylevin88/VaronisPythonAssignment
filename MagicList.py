@@ -9,11 +9,9 @@ class MagicList:
             self.__internal_list = []
 
     def __setitem__(self, key, value):
-        if key < len(self.__internal_list):
-            self.__internal_list[key] = value
-        elif key == len(self.__internal_list):
+        if key == len(self.__internal_list):
             self.__internal_list.append(value)
-        else:  # if it is invalid index - insert to get the error
+        else:  # if it is invalid index still insert to get the error
             self.__internal_list[key] = value
 
     def __getitem__(self, item):
